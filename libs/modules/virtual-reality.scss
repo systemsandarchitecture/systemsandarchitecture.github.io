@@ -1,0 +1,37 @@
+#virtual-reality {
+  .instructions {
+    padding: 0 0 24px;
+    text-align: center;
+    .mobile {
+      @include laptop-min {
+        display: none;
+      }
+    }
+    .desktop {
+      @include tablet-max {
+        display: none;
+      }
+    }
+  }
+  .items {
+    display: grid;
+    grid-row-gap: 48px;
+  }
+  .item {
+    position: relative;
+    height: 400px;
+    .title {
+      position: absolute;
+      bottom: 6px;
+      left: 6px;
+      color: $white;
+      font-family: $primary-font;
+      font-size: 24px;
+      @include tablet-min {
+        bottom: 24px;
+        left: 24px;
+        font-size: 32px;
+      }
+    }
+  }
+}

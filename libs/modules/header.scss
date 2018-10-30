@@ -1,0 +1,153 @@
+.navbar {
+  @include tablet-min {
+    margin: 0 0 0 50%;
+  }
+  .navbar-header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    min-height: 72px;
+    padding: 0 24px 0 0;
+    width: 100%;
+    z-index: 10000;
+    @include small-phone {
+      min-height: 60px;
+      padding: 0 12px 0 0;
+    }
+    @include tablet-min {
+      min-height: 84px;
+      width: 50%;
+    }
+    @include desktop-min {
+      min-height: 96px;
+    }
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-image {
+    padding: 0 12px 0 0;
+    max-height: 72px;
+    @include small-phone {
+      padding: 0 6px 0 0;
+      max-height: 60px;
+    }
+    @include tablet-min {
+      max-height: 84px;
+    }
+    @include desktop-min {
+      max-height: 96px;
+    }
+  }
+  .navbar-title {
+    color: $primary-color;
+    font-family: $primary-font;
+    font-size: 16px;
+    text-transform: uppercase;
+    @include small-phone {
+      font-size: 14px;
+    }
+    @include phone {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+    @include laptop {
+      font-size: 18px;
+    }
+    @include desktop-min {
+      font-size: 20px;
+    }
+  }
+  .navbar-icon {
+    cursor: pointer;
+    height: 24px;
+  }
+  #navbar-menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    background-color: $white;
+    height: calc(100% - 72px);
+    width: 100%;
+    z-index: 8000;
+    transition: all .4s;
+    @include small-phone {
+      height: calc(100% - 60px);
+    }
+    @include tablet-min {
+      height: calc(100% - 84px);
+      width: 50%;
+    }
+    @include desktop-min {
+      height: calc(100% - 96px);
+    }
+  }
+  .menu-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    padding: 0 24px;
+    transition: all 1s;
+    @include phone-max {
+      min-height: 48px;
+    }
+    @include tablet-min {
+      min-height: 72px;
+    }
+    .menu-link {
+      color: $primary-color;
+      font-weight: 300;
+      transition: all 1s;
+      @include tablet-min {
+        font-size: 24px;
+      }
+      @include desktop-min {
+        font-size: 28px;
+      }
+    }
+    &:hover, &:focus, &:active {
+      background: $gray-lighter;
+      .menu-link {
+        font-weight: 700;
+      }
+    }
+  }
+  .menu-social {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    p {
+      color: $primary-color;
+      font-family: $primary-font;
+      font-size: 24px;
+      font-weight: 900;
+      padding: 0 0 12px 0;
+      text-align: center;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: space-around;
+      .fab {
+        color: $primary-color;
+        font-size: 48px;
+      }
+    }
+  }
+}
+.navbar-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+}

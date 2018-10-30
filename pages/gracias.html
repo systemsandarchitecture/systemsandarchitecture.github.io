@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <script>
+    function getHead() {
+      fetch('./head.html')
+      .then(function(response) {
+        return response.text();
+      }).then(function(data) {
+        document.head.innerHTML = data;
+      })
+    }
+    getHead();
+  </script>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <!-- navbar -->
+    <nav class="navbar navbar-top">
+      <!-- container-fluid -->
+      <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+          <!-- nav -->
+          <div class="nav">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+              <!-- navbar-brand -->
+              <a href="../espanol.html" class="navbar-brand">
+                <!-- navbar-image -->
+                <img src="../assets/images/systems-and-architecture-logo.png" alt="Systems & Architecture Logo" class="navbar-image">
+                <!-- navbar-image -->
+                <!-- navbar-title -->
+                <h1 class="navbar-title">Systems & Architecture</h1>
+                <!-- navbar-title -->
+              </a>
+              <!-- navbar-brand -->
+              <!-- navbar-icon -->
+              <svg height="24" width="24" class="navbar-icon navbar-open">
+                <path d="M 0,6 24,6" stroke="#1969cd" stroke-width="1" class="path-one"/>
+                <path d="M 0,12 24,12" stroke="#1969cd" stroke-width="1" class="path-two"/>
+                <path d="M 0,18 24,18" stroke="#1969cd" stroke-width="1" class="path-three"/>
+              </svg>
+              <!-- navbar-icon -->
+            </div>
+            <!-- navbar-header -->
+            <!-- navbar-menu -->
+            <div id="navbar-menu">
+              <!-- menu-items -->
+              <ul class="menu-items">
+                <li class="menu-item"><a href="../espanol.html#inicio" class="menu-link">Inicio</a></li>
+                <li class="menu-item"><a href="../espanol.html#services" class="menu-link">Servicios</a></li>
+                <li class="menu-item"><a href="../espanol.html#portfolio" class="menu-link">Portafolio</a></li>
+                <li class="menu-item"><a href="../espanol.html#contactanos" class="menu-link">Contáctanos</a></li>
+                <li class="menu-item"><a href="../espanol.html#acerca" class="menu-link">Nosotros</a></li>
+                <li class="menu-item"><a href="../" class="menu-link">English</a></li>
+              </ul>
+              <!-- menu-items -->
+              <!-- menu-social -->
+              <div class="menu-social">
+                <!-- social-icons -->
+                <div class="social-icons">
+                  <a href="https://twitter.com/sysandarc/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                  <a href="https://www.instagram.com/sysandarc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://facebook.com/sysandarc/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </div>
+                <!-- social-icons -->
+              </div>
+              <!-- menu-social -->
+            </div>
+            <!-- navbar-menu -->
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container-fluid -->
+    </nav>
+    <!-- navbar -->
+  </header>
+  <!-- header -->
+
+  <!-- thanks -->
+  <section id="thanks">
+    <!-- thanks-opacity -->
+    <div class="thanks-opacity"></div>
+    <!-- thanks-opacity -->
+    <!-- thanks -->
+    <div class="thanks">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- content -->
+          <div class="content">
+            <h1>Gracias</h1>
+            <p>Recibimos tu mensaje, nos comunicaremos contigo lo más pronto posible...</p>
+            <a href="../espanol.html">regresa al inicio</a>
+          </div>
+          <!-- content -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!-- thanks -->
+  </section>
+  <!-- thanks -->
+
+  <!-- scripts -->
+  <!-- basic -->
+  <script src="../assets/js/basic.min.js"></script>
+  <!-- plugins -->
+  <!-- custom scripts -->
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
