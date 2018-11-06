@@ -2,7 +2,7 @@ import variables from './variables';
 
 let language = variables.language;
 
-const footerSection =  document.querySelector('#footer');
+const footerSection =  document.querySelector('#footer-section');
 
 const footerSectionStructure = `
   <div class="container">
@@ -11,9 +11,15 @@ const footerSectionStructure = `
         <div class="footer-social">
           <h4 class="social-title">${language('follow us', 'síguenos')}</h4>
           <div class="social-icons">
-            <a href="https://twitter.com/sysandarc/" target="_blank" data-aos="zoom-in-up"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.instagram.com/sysandarc/" target="_blank" data-aos="zoom-in-up"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/sysandarc/" target="_blank" data-aos="zoom-in-up"><i class="fab fa-facebook-square"></i></a>
+            <a href="${variables.twitter}" target="_blank" data-aos="zoom-in-up">
+              <i class="${variables.twitterIcon}"></i>
+            </a>
+            <a href="${variables.instagram}" target="_blank" data-aos="zoom-in-up">
+              <i class="${variables.instagramIcon}"></i>
+            </a>
+            <a href="${variables.facebook}" target="_blank" data-aos="zoom-in-up">
+              <i class="${variables.facebookIcon}"></i>
+            </a>
           </div>
         </div>
         <hr>

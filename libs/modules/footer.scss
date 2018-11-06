@@ -1,0 +1,55 @@
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10000;
+  .navbar-bottom {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: $white;
+    transition: all 1s;
+  }
+  .bottom-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $primary-color;
+    height: 60px;
+    transition: all 1s;
+    @include small-phone {
+      height: 48px;
+    }
+    @include tablet-min {
+      height: 84px;
+    }
+    @include desktop-min {
+      height: 96px;
+    }
+    .bottom-icon {
+      font-size: 24px;
+      padding-bottom: 3px;
+      @include small-phone {
+        font-size: 20px;
+        padding-bottom: 2px;
+      }
+      @include tablet-min {
+        font-size: 28px;
+        padding-bottom: 6px;
+      }
+    }
+    .bottom-text {
+      font-size: 12px;
+      @include small-phone {
+        font-size: 10px;
+      }
+    }
+    &:hover, &:focus, &:active {
+      color: $primary-color-light;
+      transform: scale(1.2);
+    }
+  }
+}
+.navbar-bottom-special {
+  @include box-shadow-top();
+}

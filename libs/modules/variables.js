@@ -13,10 +13,21 @@ module.exports = {
       return spa;
     }
   },
-  phoneLink: '1-470-295-5723',
   phone: '(470) 295-5723',
-  whatsapp: '14702955723',
-  email: 'info@sysandarc.com'
+  phoneLink: '1-470-295-5723',
+  phoneIcon: 'fas fa-phone',
+  smsIcon: 'far fa-comment-alt',
+  whatsappLink: '14702955723',
+  whatsappIcon: 'fab fa-whatsapp',
+  email: 'info@sysandarc.com',
+  emailIcon: 'far fa-envelope',
+  instagram: 'https://instagram.com/sysandarc/',
+  instagramIcon: 'fab fa-instagram',
+  facebook: 'https://facebook.com/sysandarc/',
+  facebookIcon: 'fab fa-facebook-f',
+  twitter: 'https://twitter.com/sysandarc/',
+  twitterIcon: 'fab fa-twitter',
+  contactFormIcon: 'fas fa-envelope-open-text'
 }
 
 

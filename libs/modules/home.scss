@@ -49,9 +49,11 @@
       align-items: center;
       background-color: $white;
       height: 320px;
+      margin-bottom: 48px;
       width: 320px;
       @include small-phone {
         height: 240px;
+        // margin-bottom: 24px;
         width: 280px;
       }
       @include tablet-min {
