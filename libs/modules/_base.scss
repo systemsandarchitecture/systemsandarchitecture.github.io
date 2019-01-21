@@ -1,13 +1,26 @@
+:root {
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Lato', sans-serif;
+}
 html {
   scroll-behavior: smooth;
 }
 html, body {
+  color: $gray-darker;
   font-family: $secondary-font;
   font-size: 20px;
   font-weight: 300;
 }
+main section {
+  &:nth-child(odd) {
+    background-color: $gray-lighter;
+  }
+}
 .page {
   padding: 96px 0;
+  @include small-phone {
+    padding: 84px 0;
+  }
   @include tablet-min {
     padding: 132px 0;
   }
@@ -19,7 +32,7 @@ html, body {
   color: $secondary-color;
   font-family: $primary-font;
   font-weight: 900;
-  h1 {
+  .title {
     @include tablet-min {
       font-size: 48px;
     }

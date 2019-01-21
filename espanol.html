@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Systems & Architecture | Diseño Web para tu Negocio en Atlanta. | Web Design for your Business in Atlanta.</title>
+  <title>Systems & Architecture | Dise&ntilde;o Web para tu Negocio | Web Design for your Business</title>
   <link rel="canonical" href="https://sysandarc.com/espanol.html">
   <!-- web app -->
   <meta name="description" content="Planificamos, diseñamos, desarrollamos y publicamos tus ideas. | We plan, design, develop, and publish your ideas.">
@@ -33,11 +33,11 @@
   <meta name="msapplication-starturl" content="./">
   <!-- facebook cards -->
   <meta property="fb:app_id" content="1089447354449011">
-  <meta property="og:url" content="https://sysandarc.com/">
+  <meta property="og:url" content="https://sysandarc.com/espanol.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Systems & Architecture">
-  <meta property="og:title" content="Diseño Web para tu Negocio en Atlanta. | Web Design for your Business in Atlanta.">
-  <meta property="og:description" content="Planificamos, diseñamos, desarrollamos y publicamos tus ideas. | We plan, design, develop, and publish your ideas.">
+  <meta property="og:title" content="Diseño Web para tu Negocio">
+  <meta property="og:description" content="Planificamos, diseñamos, desarrollamos y publicamos tus ideas">
   <meta property="og:image" content="https://sysandarc.com/assets/images/systems-and-architecture-cover.png">
   <meta property="og:locale" content="es_LA">
   <!-- twitter cards -->
@@ -119,7 +119,7 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,900|Lato:300" rel="stylesheet">
   <!-- icons -->
-  <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
   <!-- inline css -->
   <!-- custom css -->
   <link href="./assets/css/style.css" rel="stylesheet">
@@ -127,16 +127,6 @@
   <!-- favicon -->
   <link href="./favicon.ico" rel="icon">
   <!-- scripts -->
-  <script>
-    function getPage(page) {
-      fetch('./pages/'+page+'.html')
-      .then(function(response) {
-        return response.text();
-      }).then(function(data) {
-        document.querySelector('#'+page).innerHTML = data;
-      });
-    }
-  </script>
   <!-- google analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77234848-1"></script>
   <script>
@@ -169,7 +159,7 @@
         appId            : '1089447354449011',
         autoLogAppEvents : true,
         xfbml            : true,
-        version          : 'v2.11'
+        version          : 'v3.2'
       });
     };
     (function(d, s, id){
@@ -181,7 +171,6 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
   <!-- facebook -->
-
   <!-- header -->
   <header>
     <!-- navbar -->
@@ -265,22 +254,23 @@
   <footer id="footer"></footer>
   <!-- footer -->
 
-  <!-- services -->
-  <section class="page" id="services"></section>
-  <!-- services -->
+  <main>
+    <!-- services -->
+    <section class="page" id="services"></section>
+    <!-- services -->
 
-  <!-- portfolio -->
-  <section class="page" id="portfolio"></section>
-  <!-- portfolio -->
+    <!-- portfolio -->
+    <section class="page" id="portfolio"></section>
+    <!-- portfolio -->
 
-  <!-- contact -->
-  <section class="page" id="contact"></section>
-  <!-- contact -->
+    <!-- contact -->
+    <section class="page" id="contact"></section>
+    <!-- contact -->
 
-  <!-- about -->
-  <section class="page" id="acerca"></section>
-  <script>getPage('acerca');</script>
-  <!-- aabout -->
+    <!-- about -->
+    <section class="page" id="about"></section>
+    <!-- aabout -->
+  </main>
 
   <!-- footer -->
   <section class="page" id="footer-section"></section>

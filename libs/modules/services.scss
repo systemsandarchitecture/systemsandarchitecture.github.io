@@ -1,6 +1,5 @@
 #services {
   position: relative;
-  background-color: $gray-lighter;
   .content {
     padding-top: 84px;
   }
@@ -14,10 +13,9 @@
     .services-item {
       position: relative;
       background-color: $white;
-      color: $gray;
-      padding: 84px 24px 72px 24px;
+      padding: 84px 24px 72px;
       text-align: center;
-      .service-icon {
+      .item-icon {
         position: absolute;
         top: -60px;
         right: 0;
@@ -33,23 +31,21 @@
         margin: 0 auto;
         width: 120px;
       }
-      h2 {
-        color: $secondary-color;
+      .item-name {
         font-family: $primary-font;
-        padding: 0 0 12px 0;
+        padding: 0 0 12px;
         @include small-phone {
           font-size: 28px;
         }
       }
-      p {
-        color: $gray;
+      .item-description {
         line-height: 1.4;
-        padding: 0 0 24px 0;
+        padding: 0 0 24px;
         strong, a {
           color: $gray-darker;
         }
       }
-      .services-contact {
+      .item-contact {
         position: absolute;
         bottom: 24px;
         right: -12px;
@@ -62,8 +58,8 @@
         padding: 0 12px;
         transition: all 1s;
         @include box-shadow-bottom();
-        .fas {
-          padding: 0 0 0 6px;
+        .item-contact-icon {
+          padding-left: 6px;
         }
         &:hover, &:focus, &:active {
           background-color: $gray-lighter;

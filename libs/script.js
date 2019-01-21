@@ -5,5 +5,5 @@ import './modules/footer';
 import './modules/services';
 import './modules/portfolio';
 import './modules/contact';
-import './modules/data';
+import './modules/about';
 import './modules/footer-section';

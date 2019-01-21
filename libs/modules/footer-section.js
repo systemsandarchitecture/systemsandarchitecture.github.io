@@ -9,7 +9,7 @@ const footerSectionStructure = `
     <div class="row">
       <div class="content">
         <div class="footer-social">
-          <h4 class="social-title">${language('follow us', 'síguenos')}</h4>
+          <h4 class="social-title">${language('follow us', 's&iacute;guenos')}</h4>
           <div class="social-icons">
             <a href="${variables.twitter}" target="_blank" data-aos="zoom-in-up">
               <i class="${variables.twitterIcon}"></i>
@@ -24,8 +24,8 @@ const footerSectionStructure = `
         </div>
         <hr>
         <div class="footer-bottom">
-          <p>&copy; <span id="year"></span> <a href="./">Systems & Architecture LLC</a></p>
-          <p class="trademark">${language('All other trademarks or registered trademarks are property of their respective owners.', 'Todas las marcas y marcas registradas son propiedad de sus respectivos dueños.')}</p>
+          <p>&copy; 2015-<span id="year"></span> <a href="./">${variables.legalName}</a></p>
+          <p class="trademark">${language('All other trademarks or registered trademarks are property of their respective owners.', 'Todas las marcas y marcas registradas son propiedad de sus respectivos due&ntilde;os.')}</p>
         </div>
       </div>
     </div>

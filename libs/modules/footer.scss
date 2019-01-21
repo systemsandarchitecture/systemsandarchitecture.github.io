@@ -1,13 +1,15 @@
-#footer {
+.navbar-bottom {
   position: fixed;
   bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: $white;
   width: 100%;
   z-index: 10000;
-  .navbar-bottom {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    background-color: $white;
-    transition: all 1s;
+  transition: all 1s;
+  @include tablet-min {
+    left: 0;
+    width: 50%;
   }
   .bottom-item {
     display: flex;
@@ -28,25 +30,20 @@
     }
     .bottom-icon {
       font-size: 24px;
-      padding-bottom: 3px;
       @include small-phone {
         font-size: 20px;
-        padding-bottom: 2px;
-      }
-      @include tablet-min {
-        font-size: 28px;
-        padding-bottom: 6px;
       }
     }
     .bottom-text {
+      display: none;
       font-size: 12px;
       @include small-phone {
         font-size: 10px;
       }
     }
     &:hover, &:focus, &:active {
-      color: $primary-color-light;
-      transform: scale(1.2);
+      background-color: $primary-color;
+      color: $white;
     }
   }
 }

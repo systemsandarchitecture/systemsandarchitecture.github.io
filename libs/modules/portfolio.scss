@@ -1,151 +1,107 @@
 #portfolio {
   position: relative;
+  .content {
+    padding: 0;
+  }
   .portfolio {
     display: grid;
-    grid-row-gap: 72px;
+    grid-row-gap: 96px;
   }
-  .item-title {
-    color: $secondary-color;
-    font-family: $primary-font;
-    padding: 0 0 24px;
-    text-align: center;
-    @include small-phone {
-      font-size: 28px;
-    }
-    @include tablet-min {
-      font-size: 36px;
+  .portfolio-title {
+    padding: 0 24px 24px;
+    .title {
+      font-family: $primary-font;
+      text-align: center;
     }
   }
-  .item-class.web-design {
+  .portfolio-description {
+    padding: 0 24px 24px;
+    .description {
+      text-align: center;
+    }
+  }
+  .web-design {
     display: grid;
-    grid-row-gap: 48px;
+    grid-row-gap: 6px;
     @include tablet-min {
       grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 24px;
-    }
-    @include laptop-min {
-      grid-column-gap: 48px;
-    }
-    .item {
-      position: relative;
-      .opacity {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: linear-gradient(to bottom, rgba($black,0), rgba($black,.6));
-        transition: all 1s;
-      }
-      .name {
-        position: absolute;
-        bottom: 12px;
-        right: 12px;
-        left: 12px;
-        color: $white;
-        font-family: $primary-font;
-        font-size: 20px;
-        opacity: 1;
-        text-align: center;
-        text-transform: uppercase;
-        transition: all 1s;
-      }
-      .website {
-        position: absolute;
-        bottom: 12px;
-        right: 12px;
-        background-color: rgba($black,.6);
-        height: 0;
-        transition: all 1s;
-        .url {
-          display: none;
-          color: $white;
-          font-weight: 300;
-          height: 48px;
-          padding: 0 12px;
-        }
-        .fas {
-          font-size: 18px;
-          padding: 0 0 0 6px;
-        }
-      }
-      &:hover, &:focus, &:active {
-        .opacity {
-          top: 100%;
-        }
-        .name {
-          opacity: 0;
-        }
-        .website {
-          height: 48px;
-          .url {
-            display: flex;
-            align-items: center;
-          }
-        }
-      }
+      grid-column-gap: 6px;
     }
   }
-  .item-class.web-virtual-reality {
-    text-align: center;
-    .gallery {
-      display: inline-flex;
-      align-items: center;
-      background-color: $gray-darker;
-      color: $white;
-      font-size: 20px;
-      height: 48px;
-      padding: 0 12px;
-      transition: all 1s;
-      @include box-shadow-bottom();
-      .fas {
-        padding: 0 0 0 6px;
-      }
-      &:hover, &:focus, &:active {
+  .web-design-item {
+    position: relative;
+    border: 1px solid $gray-lighter;
+    // .item-opacity {
+    //   @include laptop-min {
+    //     position: absolute;
+    //     top: 0;
+    //     background: linear-gradient(to bottom,rgba(0,0,0,.6), rgba(0,0,0,0));
+    //     height: 100%;
+    //     width: 100%;
+    //     transition: all 1s;
+    //     &:hover, &:focus, &:active {
+    //       height: 0;
+    //     }
+    //   }
+    // }
+    .item-name {
+      display: none;
+    }
+    .item-url {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      .url {
+        display: flex;
+        align-items: center;
         background-color: $gray-lighter;
         color: $gray-darker;
+        font-weight: 300;
+        height: 48px;
+        padding: 0 12px;
+        transition: all 1s;
+        @include box-shadow-bottom();
+      }
+      .url-icon {
+        font-size: 20px;
+        padding-left: 6px;
+      }
+      &:hover, &:focus, &:active {
+        .url {
+          background-color: $gray-darker;
+          color: $white;
+        }
       }
     }
   }
-  // .item-class.digital-signage {
-  //   display: grid;
-  //   grid-row-gap: 48px;
-  //   overflow: hidden;
-  //   .item.images {
-  //     display: flex;
-  //     width: 400%;
-  //     animation: slideshow 20s infinite alternate;
-  //     animation-timing-function: linear;
-  //   }
-  //   .image-container {
-  //     width: 100%;
-  //   }
-  // }
+  .web-virtual-reality {
+    display: grid;
+    grid-row-gap: 48px;
+    padding: 0 24px;
+    @include tablet-min {
+      padding: 0 48px;
+    }
+  }
+  .web-virtual-reality-item {
+    position: relative;
+    height: 384px;
+    @include small-phone {
+      height: 288px;
+    }
+    .item-title {
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to top,rgba(0,0,0,.6), rgba(0,0,0,0));
+      height: 36px;
+      padding: 0 6px 6px;
+      width: 100%;
+    }
+    .title {
+      color: $white;
+      font-family: $primary-font;
+      @include small-phone {
+        font-size: 24px;
+      }
+    }
+  }
 }
-
-// @keyframes slideshow {
-//   0% {
-//     margin-left: 0;
-//   }
-//   20% {
-//     margin-left: 0;
-//   }
-//   25% {
-//     margin-left: -100%;
-//   }
-//   45% {
-//     margin-left: -100%;
-//   }
-//   50% {
-//     margin-left: -200%;
-//   }
-//   70% {
-//     margin-left: -200%;
-//   }
-//   75% {
-//     margin-left: -300%;
-//   }
-//   100% {
-//     margin-left: -300%;
-//   }
-// }

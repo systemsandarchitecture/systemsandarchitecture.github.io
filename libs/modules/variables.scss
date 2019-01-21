@@ -15,5 +15,5 @@ $gray-light: #c0c0c0;
 $gray-lighter: #f0f0f0;
 $white: #fff;
 // fonts
-$primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Lato', sans-serif;
+$primary-font: var(--primary-font);
+$secondary-font: var(--secondary-font);
