@@ -79,6 +79,11 @@
         }
       }
     }
+    select {
+      border-color: $gray-darker;
+      color: $primary-color;
+      font-family: $primary-font;
+    }
     .form-buttons {
       display: flex;
       justify-content:space-between;

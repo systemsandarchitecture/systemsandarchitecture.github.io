@@ -61,6 +61,10 @@ const contactStructure = `
                 </div>
               </div>
               <div class="form-group">
+                <label>${language('What service can we offer you?', '&iquest;Qu&eacute; servicio podemos ofrecerte?')}</label>
+                <select id="contact-services" name="${language('Service', 'Servicio')}"></select>
+              </div>
+              <div class="form-group">
                 <label for="contact-message">${language('Message', 'Mensaje')}:</label>
                 <textarea  id="contact-message" placeholder="${language('Tell us, how can we help you?', 'Dinos, &iquest;Com&oacute; podemos servirte?')}" rows="4" name="${language('Message', 'Mensaje')}"></textarea>
               </div>
@@ -101,4 +105,22 @@ const contactStructure = `
 
 if (contact) {
   contact.innerHTML = contactStructure;
+
+  const contactServices =  document.querySelector('#contact-services');
+
+  const servicesEnglish = variables.servicesPage.english;
+  const servicesSpanish = variables.servicesPage.spanish;
+
+  let contactService = `
+    <option value="${language('Please, select a service...', 'Por favor, selecciona un servicio...')}" selected disabled>${language('Please, select a service...', 'Por favor, selecciona un servicio...')}</option>
+  `;
+
+  for (let i = 0, j = 0; i < servicesEnglish.length, j < servicesSpanish.length; i++, j++) {
+
+    contactService += `
+      <option value="${language(servicesEnglish[i].name, servicesSpanish[j].name)}">${language(servicesEnglish[i].name, servicesSpanish[j].name)}</option>
+    `;
+  }
+  contactServices.innerHTML = contactService;
 }
+

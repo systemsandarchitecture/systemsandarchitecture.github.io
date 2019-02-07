@@ -100,6 +100,11 @@ module.exports = {
   portfolioPage: {
     webDesign: [
       {
+        name: 'Turkey Steel Erectors',
+        url: 'https://turkeysteelerectors.com/',
+        image: 'turkey-steel-erectors'
+      },
+      {
         name: 'South Cobb Storage',
         url: 'https://southcobbstorage.com/',
         image: 'south-cobb-storage'

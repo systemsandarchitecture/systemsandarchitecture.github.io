@@ -1,16 +1,9 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <script>
-    function getHead() {
-      fetch('./head.html')
-      .then(function(response) {
-        return response.text();
-      }).then(function(data) {
-        document.head.innerHTML = data;
-      })
-    }
-    getHead();
+  <script type="module">
+    import {head} from './assets/js/head.js';
+    document.head.innerHTML =  head;
   </script>
 </head>
 <body>
@@ -27,9 +20,9 @@
             <!-- navbar-header -->
             <div class="navbar-header">
               <!-- navbar-brand -->
-              <a href="../espanol.html" class="navbar-brand">
+              <a href="./espanol.html" class="navbar-brand">
                 <!-- navbar-image -->
-                <img src="../assets/images/systems-and-architecture-logo.png" alt="Systems & Architecture Logo" class="navbar-image">
+                <img src="./assets/images/systems-and-architecture-logo.png" alt="Systems & Architecture Logo" class="navbar-image">
                 <!-- navbar-image -->
                 <!-- navbar-title -->
                 <h1 class="navbar-title">Systems & Architecture</h1>
@@ -49,25 +42,14 @@
             <div id="navbar-menu">
               <!-- menu-items -->
               <ul class="menu-items">
-                <li class="menu-item"><a href="../espanol.html#inicio" class="menu-link">Inicio</a></li>
-                <li class="menu-item"><a href="../espanol.html#services" class="menu-link">Servicios</a></li>
-                <li class="menu-item"><a href="../espanol.html#portfolio" class="menu-link">Portafolio</a></li>
-                <li class="menu-item"><a href="../espanol.html#contactanos" class="menu-link">Contáctanos</a></li>
-                <li class="menu-item"><a href="../espanol.html#acerca" class="menu-link">Nosotros</a></li>
-                <li class="menu-item"><a href="../" class="menu-link">English</a></li>
+                <li class="menu-item"><a href="./espanol.html#inicio" class="menu-link">Inicio</a></li>
+                <li class="menu-item"><a href="./espanol.html#services" class="menu-link">Servicios</a></li>
+                <li class="menu-item"><a href="./espanol.html#portfolio" class="menu-link">Portafolio</a></li>
+                <li class="menu-item"><a href="./espanol.html#contactanos" class="menu-link">Contáctanos</a></li>
+                <li class="menu-item"><a href="./espanol.html#about" class="menu-link">Nosotros</a></li>
+                <li class="menu-item"><a href="./" class="menu-link">English</a></li>
               </ul>
               <!-- menu-items -->
-              <!-- menu-social -->
-              <div class="menu-social">
-                <!-- social-icons -->
-                <div class="social-icons">
-                  <a href="https://twitter.com/sysandarc/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                  <a href="https://www.instagram.com/sysandarc/" target="_blank"><i class="fab fa-instagram"></i></a>
-                  <a href="https://facebook.com/sysandarc/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                </div>
-                <!-- social-icons -->
-              </div>
-              <!-- menu-social -->
             </div>
             <!-- navbar-menu -->
           </div>
@@ -81,38 +63,30 @@
   </header>
   <!-- header -->
 
-  <!-- thanks -->
-  <section id="thanks">
-    <!-- thanks-opacity -->
-    <div class="thanks-opacity"></div>
-    <!-- thanks-opacity -->
-    <!-- thanks -->
-    <div class="thanks">
-      <!-- container -->
+  <!-- thank-you -->
+  <section id="thank-you">
+    <div class="thank-you-opacity"></div>
+    <div class="thank-you">
       <div class="container">
-        <!-- row -->
         <div class="row">
-          <!-- content -->
           <div class="content">
-            <h1>Gracias</h1>
-            <p>Recibimos tu mensaje, nos comunicaremos contigo lo más pronto posible...</p>
-            <a href="../espanol.html">regresa al inicio</a>
+            <div class="thank-you-content">
+              <h1 class="thank-you-title">Gracias</h1>
+              <p class="thank-you-text">Recibimos tu mensaje, nos comunicaremos contigo lo más pronto posible...</p>
+              <a href="./" class="thank-you-link">regresa al inicio</a>
+            </div>
           </div>
-          <!-- content -->
         </div>
-        <!-- row -->
       </div>
-      <!-- container -->
     </div>
-    <!-- thanks -->
   </section>
-  <!-- thanks -->
+  <!-- thank-you -->
 
   <!-- scripts -->
   <!-- basic -->
-  <script src="../assets/js/basic.min.js"></script>
+  <script src="./assets/js/basic.min.js"></script>
   <!-- plugins -->
   <!-- custom scripts -->
-  <script src="../assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>

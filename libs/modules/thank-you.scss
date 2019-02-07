@@ -1,15 +1,15 @@
-#error {
+#thank-you {
   position: relative;
   background: url(../images/systems-and-architecture-home-2.jpg) center/cover no-repeat;
   height: 100vh;
-  .error-opacity {
+  .thank-you-opacity {
     position: absolute;
     top: 0;
     background-color: rgba($primary-color,.6);
     height: 100%;
     width: 100%;
   }
-  .error {
+  .thank-you {
     position: absolute;
     top: 0;
     display: flex;
@@ -18,19 +18,19 @@
     height: 100%;
     text-align: center;
     width: 100%;
-    .error-content {
+    .thank-you-content {
       padding-bottom: 48px;
     }
-    .error-title {
+    .thank-you-title {
       font-family: $primary-font;
       font-weight: 900;
       padding-bottom: 12px;
     }
-    .error-text {
+    .thank-you-text {
       font-size: 24px;
       padding-bottom: 12px;
     }
-    .error-link {
+    .thank-you-link {
       display: inline-flex;
       align-items: center;
       background-color: $white;
