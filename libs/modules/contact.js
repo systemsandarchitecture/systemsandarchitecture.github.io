@@ -72,7 +72,7 @@ const contactStructure = `
                 <button type="reset" value="Reset">${language('Reset', 'Borrar')}</button>
                 <button type="submit" value="Submit">${language('Submit', 'Enviar')}</button>
               </div>
-              <input type="hidden" name="_next" value="${variables.domain}/${language('thank-you', 'gracias')}.html">
+              <input type="hidden" name="_next" value="${variables.domain}${language('thank-you', 'gracias')}.html">
             </form>
           </div>
           <div class="contact-items">
