@@ -100,6 +100,11 @@ module.exports = {
   portfolioPage: {
     webDesign: [
       {
+        name: 'Tripoli Halal Meat',
+        url: 'https://tripolihalalmeat.com/',
+        image: 'tripoli-halal-meat'
+      },
+      {
         name: 'Turkey Steel Erectors',
         url: 'https://turkeysteelerectors.com/',
         image: 'turkey-steel-erectors'
@@ -123,11 +128,6 @@ module.exports = {
         name: 'Central Services',
         url: 'https://centralservicestax.com/',
         image: 'central-services'
-      },
-      {
-        name: 'Tripoli Halal Meat',
-        url: 'https://tripolihalalmeat.com/',
-        image: 'tripoli-halal-meat'
       },
       {
         name: 'Apex Furniture Refinishing',
