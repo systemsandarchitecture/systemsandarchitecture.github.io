@@ -1,54 +1,40 @@
 #contact {
-  position: relative;
-  .title {
-    @include small-phone {
-      font-size: 32px;
-    }
-  }
   .contact {
     display: grid;
-    grid-row-gap: 48px;
-    @include laptop-min {
-      grid-row-gap: 96px;
-    }
+    grid-row-gap: 72px;
   }
   .contact-form {
-    background-color: $white;
-    padding: 24px 12px 48px;
+    background-color: $primary-color;
+    border: 1px solid $gray-light;
+    border-radius: 24px;
+    padding: 48px 24px;
+    @include small-phone {
+      padding: 48px 12px;
+    }
     @include tablet-min {
-      padding: 48px 48px 72px;
+      padding: 48px;
+    }
+    @include laptop-min {
+      margin: 0 12%;
     }
     .contact-form-header {
-      padding-bottom: 12px;
+      padding-bottom: 24px;
       text-align: center;
-      .contact-form-header-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $gray-darker;
-        border: 1px solid $gray-darker;
-        border-radius: 50%;
-        color: $white;
-        font-size: 48px;
-        height: 96px;
-        margin: 0 auto 12px auto;
-        width: 96px;
-      }
-      .contact-form-header-text {
-        font-family: $primary-font;
-        font-size: 24px;
+    }
+    .contact-form-header-icon {
+      padding-bottom: 12px;
+      .icon {
+        height: 60px;
+        width: 60px;
       }
     }
-    input, textarea {
-      border-bottom-color: $gray-darker;
-      color: $primary-color;
-      font-family: $primary-font;
+    input, textarea, select {
+      border-bottom-color: $gray;
+      color: $tertiary-color;
+      font-family: $secondary-font;
     }
-    .form-group-inline {
-      display: grid;
-      @include laptop-min {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    ::-webkit-input-placeholder {
+      color: $gray-light;
     }
     .radio {
       height: 48px;
@@ -59,111 +45,120 @@
         input[type=radio] {
           display: none;
           &:checked+span {
-            color: $primary-color;
+            color: $tertiary-color;
+            font-family: $secondary-font;
           }
           &+span:before {
-            border: 1px solid $gray-darker;
+            display: inline-block;
+            border: 1px solid $gray;
             border-radius: 50%;
             content: "";
-            display: inline-block;
+            height: 36px;
             margin-bottom: -12px;
             margin-right: 12px;
-            height: 36px;
             width: 36px;
             transition: all 1s;
           }
           &:checked+span:before {
-            background: $primary-color;
-            border: 1px solid $primary-color;
+            background: $tertiary-color;
+            border: 1px solid $tertiary-color;
           }
         }
       }
     }
     select {
-      border-color: $gray-darker;
-      color: $primary-color;
-      font-family: $primary-font;
+      border-color: $gray;
     }
     .form-buttons {
       display: flex;
-      justify-content:space-between;
-      padding-bottom: 0;
+      justify-content: space-between;
     }
     button {
-      display: flex;
-      align-items: center;
-      background-color: $gray-darker;
       border: none;
-      color: $white;
-      cursor: pointer;
-      font-family: $secondary-font;
-      font-weight: 300;
-      height: 48px;
-      padding: 0 24px;
-      transition: all 1s;
+      border-radius: 24px;
+      font-family: $primary-font;
+      font-weight: 200;
       @include box-shadow-bottom();
-      &:hover, &:focus, &:active {
-        background-color: $gray-lighter;
-        color: $gray-darker;
-      }
     }
-    ::-webkit-input-placeholder {
-      color: $gray-lighter;
+    .reset {
+      background: $primary-color;
+      color: $secondary-color;
+    }
+    .submit {
+      background: linear-gradient(to right, $tertiary-color, $secondary-color);
+      color: $primary-color;
     }
   }
   .contact-items {
     display: grid;
-    grid-row-gap: 48px;
+    grid-row-gap: 72px;
     @include laptop-min {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 48px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 72px;
     }
   }
-  .contact-item {
-    display: block;
-    background-color: $white;
-    color: $gray-darker;
-    padding: 24px 24px 48px;
+  .item {
+    border-radius: 24px;
+    color: $gray;
+    padding: 48px 24px;
     text-align: center;
     transition: all 1s;
-    @include tablet-min {
-      padding: 48px 24px 72px;
+    @include box-shadow-bottom();
+    @include laptop-min {
+      &:nth-child(1) {
+        grid-column: 1/3;
+      }
+      &:nth-child(2) {
+        grid-column: 3/5;
+      }
+      &:nth-child(3) {
+        grid-column: 2/4;
+      }
     }
-    .contact-icon {
+    .item-icon {
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $gray-darker;
+      background: $primary-color;
       border-radius: 50%;
-      color: $white;
-      font-size: 48px;
       height: 96px;
-      margin: 0 auto 12px auto;
+      margin: 0 auto 6px;
       width: 96px;
       transition: all 1s;
-    }
-    .contact-text {
-      font-size: 24px;
-      font-weight: 300;
-      padding-bottom: 6px;
-    }
-    .contact-detail {
-      font-family: $primary-font;
-      font-size: 24px;
-      font-weight: 900;
-    }
-    .email {
-      @include small-phone {
-        font-size: 18px;
+      .icon {
+        height: 60px;
+        width: 60px;
       }
     }
-    &:hover, &:focus, &:active {
-      background-color: $gray-darker;
-      color: $white;
+    .item-text {
+      font-weight: 200;
+    }
+    .item-detail {
+      font-family: $secondary-font;
+      font-size: 28px;
+    }
+    .email {
+      font-size: 16px;
+      @include small-phone {
+        font-size: 14px;
+      }
+      @include tablet-min {
+        font-size: 24px;
+      }
+      @include laptop {
+        font-size: 20px;
+      }
+    }
+    @include link {
       transform: scale(1.05);
-      .contact-icon {
-        background-color: $white;
-        color: $gray-darker;
+      .item-icon {
+        background: linear-gradient(to bottom right, $tertiary-color, $secondary-color);
+        .icon {
+          stroke: $primary-color;
+        }
+      }
+      .item-text {
+        font-weight: 200;
       }
     }
   }

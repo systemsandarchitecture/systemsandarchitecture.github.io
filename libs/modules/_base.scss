@@ -1,82 +1,50 @@
 :root {
+  --primary-color: #fff;
+  --secondary-color: #800080;
+  --tertiary-color: #326edc;
+  --white: #fff;
+  --black: #000;
+  --gray: #202020;
+  --gray-light: #ececec;
+  --gray-lighter: #f8f8f8;
   --primary-font: 'Montserrat', sans-serif;
-  --secondary-font: 'Lato', sans-serif;
+  --secondary-font: 'Playfair Display', serif;
 }
 html {
   scroll-behavior: smooth;
 }
 html, body {
-  color: $gray-darker;
-  font-family: $secondary-font;
+  color: $gray;
+  font-family: $primary-font;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 200;
+}
+.icon {
+  height: 28px;
+  stroke: $secondary-color;
+  width: 28px;
+  transition: all .4s;
+  @include small-phone {
+    height: 24px;
+    width: 24px;
+  }
 }
 main section {
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background-color: $gray-lighter;
   }
 }
-.page {
-  padding: 96px 0;
-  @include small-phone {
-    padding: 84px 0;
-  }
+.basic-page .page-title {
+  padding-bottom: 48px;
   @include tablet-min {
-    padding: 132px 0;
+    padding-bottom: 72px;
   }
-  @include desktop-min {
-    padding: 144px 0;
-  }
-}
-.page-title {
-  color: $secondary-color;
-  font-family: $primary-font;
-  font-weight: 900;
   .title {
-    @include tablet-min {
-      font-size: 48px;
+    color: $secondary-color;
+    font-family: $secondary-font;
+    font-weight: 900;
+    @include desktop-min {
+      font-size: 44px;
     }
   }
-}
-.content {
-  padding: 0 24px;
-  @include tablet-min {
-    padding: 0 48px;
-  }
-}
-.bottom-left {
-  position: absolute;
-  bottom: 0;
-  margin: 0 50% 0 0;
-  width: 50%;
-  @include phablet-max {
-    display: none;
-  }
-  @include tablet-min {
-    height: 84px;
-  }
-  @include desktop-min {
-    height: 96px;
-  }
-}
-.top-right {
-  position: absolute;
-  top: 0;
-  margin: 0 0 0 50%;
-  width: 50%;
-  @include phablet-max {
-    display: none;
-  }
-  @include tablet-min {
-    height: 84px;
-  }
-  @include desktop-min {
-    height: 96px;
-  }
-}
-.gray {
-  background-color: $gray-lighter;
-}
-.white {
-  background-color: $white;
 }

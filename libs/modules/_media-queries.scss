@@ -1,10 +1,10 @@
-// media queries
 $phone: 375px;
 $smartphone: 401px;
 $phablet: 576px;
 $tablet: 768px;
 $laptop: 992px;
 $desktop: 1200px;
+$tv: 1440px;
 @mixin small-phone {
   @media screen and (max-width: #{$phone - 1px}) {
     @content;
@@ -87,6 +87,21 @@ $desktop: 1200px;
 }
 @mixin desktop-min {
   @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: #{$desktop}) and (max-width: #{$tv - 1px}) {
+    @content;
+  }
+}
+@mixin desktop-max {
+  @media screen and (max-width: #{$tv - 1px}) {
+    @content;
+  }
+}
+@mixin tv-min {
+  @media screen and (min-width: #{$tv}) {
     @content;
   }
 }

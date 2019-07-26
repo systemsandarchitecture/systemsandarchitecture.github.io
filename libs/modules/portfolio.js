@@ -1,34 +1,34 @@
 import variables from './variables';
 
-let language =  variables.language;
+let lang =  variables.language;
 
 const portfolio = document.querySelector('#portfolio');
 
-const portfolioStructure = `
-  <div class="top-right gray"></div>
+let portfolioStructure = `
   <div class="container">
     <div class="row">
       <div class="page-title">
-        <h1 class="title">${language('Portfolio', 'Portafolio')}</h1>
+        <h1 class="title">${lang('Portfolio', 'Portafolio')}</h1>
       </div>
-      <div class="content">
-        <div class="portfolio">
-          <div class="portfolio-item">
-            <div class="portfolio-title">
-              <h2 class="title">${language('Web Design', 'Dise&ntilde;o Web')}</h2>
-            </div>
-            <div class="web-design"></div>
+      <div class="portfolio">
+
+        <div class="portfolio-item">
+          <div class="portfolio-title">
+            <h2 class="title">${lang('Web Design', 'Dise&ntilde;o Web')}</h2>
           </div>
-          <div class="portfolio-item">
-            <div class="portfolio-title">
-              <h2 class="title">${language('Web Virtual Reality', 'Realidad Virtual en tu P&aacute;gina Web')}</h2>
-            </div>
-            <div class="portfolio-description">
-              <p class="description">${language('tilt your phone or tap and drag to see around the pictures', 'click and drag on any picture to move around')}</p>
-            </div>
-            <div class="web-virtual-reality"></div>
-          </div>
+          <div class="web-design"></div>
         </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-title">
+            <h2 class="title">${lang('Web Virtual Reality', 'Realidad Virtual en tu P&aacute;gina Web')}</h2>
+          </div>
+          <div class="portfolio-description">
+            <p class="description">${lang('In your phone, tilt or tap and drag to see around the pictures. In your computer, click and drag on any picture to move around.', 'En tu tel&eacute;fono, muevelo o toca y arrastra para ver alrededor de las im&aacute;genes. En tu computadora, haz clic y arrastra para ver alrededor de las imagenes.')}</p>
+          </div>
+          <div class="web-virtual-reality"></div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -37,34 +37,36 @@ const portfolioStructure = `
 if (portfolio) {
   portfolio.innerHTML = portfolioStructure;
 
+  // web design
   const webDesignClass =  document.querySelector('.web-design');
 
-  const webDesign =  variables.portfolioPage.webDesign;
+  const webDesign =  variables.portfolio.webDesign;
 
   let webDesignItem = '';
 
   for (let i in webDesign) {
 
+    let name = webDesign[i].name;
+    let url = webDesign[i].url;
+    let image = webDesign[i].image;
+
     webDesignItem += `
       <div class="web-design-item">
-        <div class="item-image">
-          <img src="./assets/images/portfolio/web-design/${webDesign[i].image}.png" alt="${variables.name} | ${webDesign[i].name}" class="image" data-aos="zoom-in-up">
+        <div class="item-image-container">
+          <img src="./assets/images/portfolio/web-design/${image}.png" alt="${variables.name} | ${name}" class="item-image" data-aos="zoom-in-up">
         </div>
-        <div class="item-opacity"></div>
-        <div class="item-name">
-          <h3 class="name">${webDesign[i].name}</h3>
-        </div>
-        <div class="item-url">
-          <a href="${webDesign[i].url}" target="_blank" rel="noopener" class="url">${language('check out their website', 'revisa su p&aacute;gina web')}<i class="fas fa-chevron-right url-icon"></i></a>
+        <h3 class="item-name">${name}</h3>
+        <a href="${url}" target="_blank" rel="noopener" class="item-url" data-aos="zoom-in-up">${lang('check out their website', 'revisa su p&aacute;gina web')}</a>
         </div>
       </div>
     `;
   }
-  webDesignClass.innerHTML = webDesignItem
-
+  webDesignClass.innerHTML = webDesignItem;
+  
+  // web virtual reality
   const webVirtualRealityClass =  document.querySelector('.web-virtual-reality');
 
-  const webVirtualReality =  variables.portfolioPage.webVirtualReality;
+  const webVirtualReality =  variables.portfolio.webVirtualReality;
 
   let webVirtualRealityItem = '';
 
@@ -72,7 +74,9 @@ if (portfolio) {
 
     webVirtualRealityItem += `
     <div class="web-virtual-reality-item">
-      <iframe width="100%" height="100%" allowfullscreen="yes" scrolling="no" allowvr="yes" src="./views/${webVirtualReality[j].url}.html" frameborder="0"></iframe>
+      <div class="item-image">
+        <iframe width="100%" height="100%" allowfullscreen="yes" scrolling="no" allowvr="yes" src="./views/${webVirtualReality[j].url}.html" frameborder="0"></iframe>
+      </div>
       <div class="item-title">
         <h3 class="title">${webVirtualReality[j].name}</h3>
       </div>

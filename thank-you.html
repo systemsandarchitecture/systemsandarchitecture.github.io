@@ -1,18 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <script type="module">
-    import {head} from './assets/js/head.js';
-    document.head.innerHTML =  head;
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Systems & Architecture | Web Design for your Business | Diseño Web para tu Negocio</title>
+  <!-- web app -->
+  <meta name="description" content="Based in Atlanta, we plan, design, develop, and publish your ideas. Call us at 470-295-5723 | Ubicados en Atlanta, planificamos, diseñamos, desarrollamos y publicamos tus ideas. Llámanos al 470-295-5723">
+  <!-- web app icons -->
+  <!-- web app theme -->
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="msapplication-navbutton-color" content="#fff">
+  <meta name="msapplication-starturl" content="./">
+  <!-- facebook cards -->
+  <!-- twitter cards -->
+  <!-- json-ld -->
+  <!-- styles -->
+  <!-- basic -->
+  <link href="./assets/css/basic.min.css" rel="stylesheet">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,900|Playfair+Display:700,900&display=swap" rel="stylesheet">
+  <!-- icons -->
+  <!-- inline css -->
+  <!-- custom css -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <!-- plugins -->
+  <!-- favicon -->
+  <link href="./favicon.ico" rel="icon">
+  <!-- scripts -->
+  <!-- google analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77234848-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-77234848-1');
   </script>
+  <!-- google analytics -->
 </head>
 <body>
   <!-- header -->
   <header>
     <!-- navbar -->
-    <nav class="navbar navbar-top">
-      <!-- container-fluid -->
-      <div class="container-fluid">
+    <nav class="navbar navbar-top navbar-special">
+      <!-- container -->
+      <div class="container">
         <!-- row -->
         <div class="row">
           <!-- nav -->
@@ -22,20 +55,20 @@
               <!-- navbar-brand -->
               <a href="./" class="navbar-brand">
                 <!-- navbar-image -->
-                <img src="./assets/images/systems-and-architecture-logo.png" alt="Systems & Architecture Logo" class="navbar-image">
+                <img src="./assets/images/systems-and-architecture.png" alt="Systems & Architecture Logo" class="navbar-image">
                 <!-- navbar-image -->
                 <!-- navbar-title -->
                 <h1 class="navbar-title">Systems & Architecture</h1>
                 <!-- navbar-title -->
               </a>
               <!-- navbar-brand -->
-              <!-- navbar-icon -->
-              <svg height="24" width="24" class="navbar-icon navbar-open">
-                <path d="M 0,6 24,6" stroke="#1969cd" stroke-width="1" class="path-one"/>
-                <path d="M 0,12 24,12" stroke="#1969cd" stroke-width="1" class="path-two"/>
-                <path d="M 0,18 24,18" stroke="#1969cd" stroke-width="1" class="path-three"/>
-              </svg>
-              <!-- navbar-icon -->
+              <!-- navbar-icon-container -->
+              <div class="navbar-icon-container">
+                <div class="navbar-icon-background navbar-open">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-menu menu-icon-open"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </div>
+              </div>
+              <!-- navbar-icon-container -->
             </div>
             <!-- navbar-header -->
             <!-- navbar-menu -->
@@ -57,7 +90,7 @@
         </div>
         <!-- row -->
       </div>
-      <!-- container-fluid -->
+      <!-- container -->
     </nav>
     <!-- navbar -->
   </header>
@@ -65,7 +98,6 @@
 
   <!-- thank-you -->
   <section id="thank-you">
-    <div class="thank-you-opacity"></div>
     <div class="thank-you">
       <div class="container">
         <div class="row">

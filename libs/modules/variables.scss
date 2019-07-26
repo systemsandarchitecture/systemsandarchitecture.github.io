@@ -1,19 +1,12 @@
 // colors
-$primary-color-darker: #000569; // (0, 5, 105)
-$primary-color-dark: #00379b; // (0, 55, 155)
-$primary-color: #1969cd; // (25,105,205)
-$primary-color-light: #4b9bff; // (75,155,255)
-$primary-color-lighter: #7dcdff; // (125,205,255)
-$secondary-color: #008080;
-$secondary-color-light: #00a0a0;
-$secondary-color-lighter: #00ffff;
-$black: #000;
-$gray-darker: #303030;
-$gray-dark: #606060;
-$gray: #909090;
-$gray-light: #c0c0c0;
-$gray-lighter: #f0f0f0;
-$white: #fff;
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiary-color);
+$white: var(--white);
+$black: var(--black);
+$gray: var(--gray);
+$gray-light: var(--gray-light);
+$gray-lighter: var(--gray-lighter);
 // fonts
 $primary-font: var(--primary-font);
 $secondary-font: var(--secondary-font);

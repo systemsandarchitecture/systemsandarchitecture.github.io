@@ -1,52 +1,67 @@
-.navbar-bottom {
+#footer {
   position: fixed;
   bottom: 0;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  background-color: $white;
   width: 100%;
-  z-index: 10000;
-  transition: all 1s;
-  @include tablet-min {
-    left: 0;
-    width: 50%;
-  }
-  .bottom-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $primary-color;
-    height: 60px;
+  z-index: 6000;
+  .navbar-bottom {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: $white;
+    width: 100%;
     transition: all 1s;
-    @include small-phone {
-      height: 48px;
-    }
     @include tablet-min {
-      height: 84px;
+      margin-left: auto;
+      width: 72%;
     }
-    @include desktop-min {
-      height: 96px;
+    @include laptop-min {
+      width: 60%;
     }
-    .bottom-icon {
-      font-size: 24px;
+    .bottom-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      transition: all 1s;
       @include small-phone {
-        font-size: 20px;
+        height: 48px;
+      }
+      @include tablet-min {
+        height: 84px;
+      }
+      @include desktop-min {
+        height: 96px;
       }
     }
-    .bottom-text {
-      display: none;
-      font-size: 12px;
-      @include small-phone {
-        font-size: 10px;
+    .bottom-icon-background {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $primary-color;
+      border-radius: 50%;
+      height: 48px;
+      width: 48px;
+      transition: all 1s;
+      @include tablet-min {
+        height: 60px;
+        width: 60px;
       }
-    }
-    &:hover, &:focus, &:active {
-      background-color: $primary-color;
-      color: $white;
+      @include link {
+        background: linear-gradient(to bottom right, $tertiary-color, $secondary-color);
+        @include box-shadow-bottom();
+        .icon {
+          height: 32px;
+          stroke: $primary-color;
+          width: 32px;
+        }
+      }
     }
   }
 }
-.navbar-bottom-special {
+#footer .navbar-bottom-special {
   @include box-shadow-top();
+  @include tablet-min {
+    .bottom-item {
+      height: 72px;
+    }
+  }
 }

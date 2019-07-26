@@ -1,78 +1,115 @@
-#home, #inicio {
-  position: relative;
-  height: 100vh;
-  .home-grid {
-    display: grid;
+#home {
+  .home {
+    position: relative;
     height: 100vh;
+  }
+  .home-background {
+    display: grid;
+    grid-template-rows: repeat(2, 50vh);
     @include tablet-min {
+      grid-template-rows: calc(50vh - 42px) calc(50vh - 42px);
+    }
+    @include laptop-min {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: calc(100vh - 84px);
     }
-    .grid-first {
-      position: relative;
-      background: url(../images/systems-and-architecture-home-1.jpg) center/cover no-repeat;
-      .first-opacity {
-        position: absolute;
-        top: 0;
-        background-color: rgba($black,.6);
-        height: 50vh;
-        width: 100%;
-        @include tablet-min {
-          height: 100vh;
-        }
-      }
+    @include desktop-min {
+      grid-template-rows: calc(100vh - 96px);
     }
-    .grid-second {
-      position: relative;
-      background: url(../images/systems-and-architecture-home-2.jpg) center/cover no-repeat;
-      .second-opacity {
-        position: absolute;
-        top: 0;
-        background-color: rgba($primary-color,.6);
-        height: 50vh;
-        width: 100%;
-        @include tablet-min {
-          height: 100vh;
-        }
-      }
+    .background-image {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
     }
   }
-  .home {
+  .home-opacity {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom right, rgba(50,110,220,.6), rgba(128,0,128,.6));
+    height: 100%;
+    width: 100%;
+    @include tablet-min {
+      height: calc(100% - 84px);
+    }
+    @include desktop-min {
+      height: calc(100% - 96px);
+    }
+  }
+  .home-content {
     position: absolute;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    .home-content {
-      display: flex;
-      align-items: center;
-      background-color: $white;
-      height: 320px;
-      margin-bottom: 48px;
-      width: 320px;
+    .home-content-items {
+      position: relative;
+      height: 240px;
+      margin: 0 24px 60px;
+      width: 100%;
       @include small-phone {
-        height: 240px;
-        // margin-bottom: 24px;
-        width: 280px;
+        height: 144px;
+        margin: 0 24px 48px;
+      }
+      @include phone {
+        height: 192px;
       }
       @include tablet-min {
-        height: 400px;
-        width: 400px;
+        margin: 0 12% 84px;
       }
-      h1 {
-        color: $primary-color;
-        font-family: $primary-font;
-        font-size: 32px;
-        font-weight: 200;
-        padding: 0 24px 24px 24px;
-        text-align: center;
-        @include tablet-min {
-          font-size: 36px;
-        }
-        @include desktop-min {
-          font-size: 40px;
-        }
+      @include laptop {
+        height: 192px;
+        margin: 0 18%;
+      }
+      @include desktop-min {
+        margin: 0 24%;
+      }
+      @media screen and (min-width: 1200px) and (max-height: 600px) {
+        height: 192px;
+      }
+    }
+    .home-content-item {
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary-color;
+      border-radius: 24px;
+      height: 100%;
+      opacity: 0;
+      padding: 0 24px;
+      width: 100%;
+      @include box-shadow-bottom();
+      @include tablet-min {
+        padding: 0 48px;
+      }
+      &.active {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+    .content-item {
+      color: $tertiary-color;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 1.2;
+      text-align: center;
+      @include small-phone {
+        font-size: 24px;
+      }
+      @include phone {
+        font-size: 28px;
+      }
+      @include tablet-min {
+        font-size: 40px;
+      }
+      @include laptop {
+        font-size: 36px;
+      }
+      @include desktop-min {
+        font-size: 44px;
       }
     }
   }

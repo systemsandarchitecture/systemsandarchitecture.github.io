@@ -1,94 +1,91 @@
 #portfolio {
-  position: relative;
-  .content {
-    padding: 0;
-  }
   .portfolio {
     display: grid;
     grid-row-gap: 96px;
   }
   .portfolio-title {
-    padding: 0 24px 24px;
+    padding: 0 24px 48px;
+    text-align: center;
     .title {
-      font-family: $primary-font;
-      text-align: center;
+      color: $tertiary-color;
+      font-family: $secondary-font;
+      font-weight: 700;
+      @include desktop-min {
+        font-size: 40px;
+      }
     }
   }
   .portfolio-description {
-    padding: 0 24px 24px;
-    .description {
-      text-align: center;
-    }
+    padding: 0 24px 48px;
+    text-align: center;
   }
+  // web design
   .web-design {
     display: grid;
-    grid-row-gap: 6px;
-    @include tablet-min {
+    grid-row-gap: 72px;
+    @include laptop-min {
       grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 6px;
+      grid-column-gap: 72px;
     }
-  }
-  .web-design-item {
-    position: relative;
-    border: 1px solid $gray-lighter;
+    .web-design-item {
+      position: relative;
+      background-color: $primary-color;
+      padding-bottom: 96px;
+    }
+    .item-image-container {
+      border-bottom: 1px solid $gray-light;
+      margin-bottom: 12px;
+    }
     .item-name {
-      display: none;
+      color: $secondary-color;
+      font-family: $secondary-font;
+      font-size: 24px;
+      padding: 0 24px 24px;
+      text-align: center;
     }
     .item-url {
       position: absolute;
-      bottom: 12px;
-      right: 12px;
-      .url {
-        display: flex;
-        align-items: center;
-        background-color: rgba(0,0,0,.6);
-        color: $white;
+      bottom: 48px;
+      right: 24px;
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(to right, $tertiary-color, $secondary-color);
+      border-radius: 24px;
+      color: $primary-color;
+      font-size: 16px;
+      height: 48px;
+      padding: 0 24px;
+      @include box-shadow-bottom();
+      @include link {
         font-weight: 300;
-        height: 48px;
-        padding: 0 12px;
-        transition: all 1s;
-        @include box-shadow-bottom();
-      }
-      .url-icon {
-        font-size: 20px;
-        padding-left: 6px;
-      }
-      &:hover, &:focus, &:active {
-        .url {
-          background-color: $gray-darker;
-          color: $white;
-        }
+        @include box-shadow-none();
       }
     }
   }
+  // web virtual reality
   .web-virtual-reality {
     display: grid;
-    grid-row-gap: 48px;
+    grid-row-gap: 72px;
     padding: 0 24px;
     @include tablet-min {
       padding: 0 48px;
     }
-  }
-  .web-virtual-reality-item {
-    position: relative;
-    height: 384px;
-    @include small-phone {
-      height: 288px;
+    .web-virtual-reality-item {
+      @include laptop-min {
+        margin: 0 12%;
+      }
     }
-    .item-title {
-      position: absolute;
-      bottom: 0;
-      background: linear-gradient(to top,rgba(0,0,0,.6), rgba(0,0,0,0));
-      height: 36px;
-      padding: 0 6px 6px;
-      width: 100%;
+    .item-image {
+      height: 384px;
+      margin-bottom: 12px;
+      @include small-phone {
+        height: 288px;
+      }
     }
     .title {
-      color: $white;
-      font-family: $primary-font;
-      @include small-phone {
-        font-size: 24px;
-      }
+      color: $secondary-color;
+      font-family: $secondary-font;
+      text-align: center;
     }
   }
 }

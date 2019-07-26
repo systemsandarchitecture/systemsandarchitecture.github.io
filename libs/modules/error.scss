@@ -1,11 +1,18 @@
 #error {
   position: relative;
-  background: url(../images/systems-and-architecture-home-2.jpg) center/cover no-repeat;
   height: 100vh;
+  .error-image {
+    height: 100%;
+    .image {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
   .error-opacity {
     position: absolute;
     top: 0;
-    background-color: rgba($primary-color,.6);
+    background: linear-gradient(to bottom right, rgba(50,110,220,.6), rgba(128,0,128,.6));
     height: 100%;
     width: 100%;
   }
@@ -14,7 +21,7 @@
     top: 0;
     display: flex;
     align-items: center;
-    color: $white;
+    color: $primary-color;
     height: 100%;
     text-align: center;
     width: 100%;
@@ -25,6 +32,7 @@
       font-family: $primary-font;
       font-weight: 900;
       padding-bottom: 12px;
+      text-transform: uppercase;
     }
     .error-text {
       font-size: 24px;
@@ -33,15 +41,20 @@
     .error-link {
       display: inline-flex;
       align-items: center;
-      background-color: $white;
-      border: 1px solid $white;
-      color: $primary-color;
+      background-color: $primary-color;
+      border: 1px solid $primary-color;
+      border-radius: 24px;
+      color: $secondary-color;
       height: 48px;
-      padding: 0 24px;
+      padding: 0 48px;
       transition: all 1s;
-      &:hover, &:focus, &:active {
+      @include small-phone {
+        padding: 0 24px;
+      }
+      @include link {
         background-color: transparent;
-        color: $white;
+        color: $primary-color;
+        font-weight: 200;
       }
     }
   }
