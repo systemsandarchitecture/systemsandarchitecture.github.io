@@ -1,3 +1,3 @@
 # Systems & Architecture Website
 
-[https://sysandarc.com/](https://sysandarc.com/)
+[https://systemsandarchitecture.com/](https://systemsandarchitecture.com/)
