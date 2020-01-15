@@ -109,18 +109,37 @@ if (contact) {
 
   const contactServices =  document.querySelector('#contact-services');
 
-  const servicesEnglish = variables.services.english;
-  const servicesSpanish = variables.services.spanish;
-
   let contactService = `
     <option value="${lang('Please, select a service...', 'Por favor, selecciona un servicio...')}" selected disabled>${lang('Please, select a service...', 'Por favor, selecciona un servicio...')}</option>
   `;
 
-  for (let i = 0, j = 0; i < servicesEnglish.length, j < servicesSpanish.length; i++, j++) {
-
-    contactService += `
-      <option value="${lang(servicesEnglish[i].name, servicesSpanish[j].name)}">${lang(servicesEnglish[i].name, servicesSpanish[j].name)}</option>
-    `;
+  function getServices() {
+    fetch(variables.spreadsheetUrl(variables.services))
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      displayServices(data);
+    });
   }
-  contactServices.innerHTML = contactService;
+  getServices();
+
+  function displayServices(data) {
+
+    let services = data.values;
+
+    for (let i in services) {
+      let name = services[i][0];
+      let nameSpa = services[i][1];
+
+      service(name, nameSpa);
+    }
+
+    function service(name, nameSpa) {
+      contactService += `
+        <option value="${lang(name, nameSpa)}">${lang(name, nameSpa)}</option>
+      `;
+    }
+    contactServices.innerHTML = contactService;
+  }
 }

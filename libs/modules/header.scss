@@ -2,66 +2,26 @@
   background-color: $primary-color;
   transition: all 1s;
   .navbar-header {
-    display: grid;
-    grid-template-columns: 1fr 72px;
+    // display: grid;
+    // grid-template-columns: 1fr 72px;
     width: 100%;
     // transition: all 1s;
-    @include small-phone {
-      grid-template-columns: 1fr 60px;
-    }
-    @include tablet-min {
-      grid-template-columns: 1fr 84px;
-    }
-    @include desktop-min {
-      grid-template-columns: 1fr 96px;
-    }
+    // @include small-phone {
+    //   grid-template-columns: 1fr 60px;
+    // }
+    // @include tablet-min {
+    //   grid-template-columns: 1fr 84px;
+    // }
+    // @include desktop-min {
+    //   grid-template-columns: 1fr 96px;
+    // }
   }
   .navbar-brand {
     display: flex;
     align-items: center;
     background-color: $primary-color;
-    z-index: 12000;
-  }
-  .navbar-image {
-    height: 60px;
-    margin: 0;
-    padding: 0 6px;
-    // transition: all 1s;
-    @include small-phone {
-      height: 48px;
-    }
-    @include tablet-min {
-      height: 72px;
-      padding: 0 12px 0 0;
-    }
-    @include desktop-min {
-      height: 84px;
-    }
-  }
-  .navbar-title {
-    color: $secondary-color;
-    font-size: 16px;
-    text-transform: uppercase;
-    @include small-phone {
-      font-size: 12px;
-    }
-    @include phone {
-      font-size: 14px;
-    }
-    @include tablet-min {
-      font-size: 24px;
-    }
-    @include desktop-min {
-      font-size: 28px;
-    }
-  }
-  .navbar-icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $primary-color;
     height: 72px;
-    // transition: all 1s;
+    z-index: 10000;
     @include small-phone {
       height: 60px;
     }
@@ -71,28 +31,78 @@
     @include desktop-min {
       height: 96px;
     }
-    .navbar-icon-background {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: $primary-color;
-      border-radius: 50%;
-      cursor: pointer;
-      height: 60px;
-      width: 60px;
-      transition: all 1s;
-      @include small-phone {
-        height: 48px;
-        width: 48px;
-      }
-      @include link {
-        @include box-shadow-bottom();
-      }
+  }
+  .navbar-image {
+    border-radius: 12px;
+    height: 60px;
+    margin: 0 6px;
+    // transition: all 1s;
+    @include small-phone {
+      height: 48px;
+    }
+    @include tablet-min {
+      height: 72px;
+      margin: 0 12px 0 0;
+    }
+    @include desktop-min {
+      height: 84px;
     }
   }
+  .navbar-title {
+    color: $secondary-color;
+    font-size: 20px;
+    text-transform: uppercase;
+    @include small-phone {
+      font-size: 16px;
+    }
+    @include phone {
+      font-size: 18px;
+    }
+    @include tablet-min {
+      font-size: 28px;
+    }
+    @include desktop-min {
+      font-size: 32px;
+    }
+  }
+  // .navbar-icon-container {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   background-color: $primary-color;
+  //   height: 72px;
+    // transition: all 1s;
+  //   @include small-phone {
+  //     height: 60px;
+  //   }
+  //   @include tablet-min {
+  //     height: 84px;
+  //   }
+  //   @include desktop-min {
+  //     height: 96px;
+  //   }
+  //   .navbar-icon-background {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     background-color: $primary-color;
+  //     border-radius: 50%;
+  //     cursor: pointer;
+  //     height: 60px;
+  //     width: 60px;
+  //     transition: all 1s;
+  //     @include small-phone {
+  //       height: 48px;
+  //       width: 48px;
+  //     }
+  //     @include link {
+  //       @include box-shadow-bottom();
+  //     }
+  //   }
+  // }
   #navbar-menu {
     position: fixed;
-    top: -100%;    
+    bottom: -100%;    
     right: 0;
     background-color: $primary-color;
     height: calc(100% - 72px);

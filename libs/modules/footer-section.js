@@ -25,3 +25,5 @@ if (footerSection) {
 
   document.querySelector('#year').textContent = year.getFullYear();
 }
+
+console.log('Created by Systems & Architecture'+'\n'+'https://systemsandarchitecture.com/');

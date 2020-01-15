@@ -1,17 +1,20 @@
 #footer {
   position: fixed;
   bottom: 0;
+  right: 0;
   width: 100%;
-  z-index: 6000;
+  z-index: 10000;
   .navbar-bottom {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     background-color: $white;
     width: 100%;
     transition: all 1s;
+    @include box-shadow-top();
     @include tablet-min {
       margin-left: auto;
       width: 72%;
+      @include box-shadow-none();
     }
     @include laptop-min {
       width: 60%;
@@ -26,7 +29,11 @@
         height: 48px;
       }
       @include tablet-min {
+        border-right: 1px solid $gray-light;
         height: 84px;
+        &:nth-child(1) {
+          border-left: 1px solid $gray-light;
+        }
       }
       @include desktop-min {
         height: 96px;
@@ -41,6 +48,10 @@
       height: 48px;
       width: 48px;
       transition: all 1s;
+      @include small-phone {
+        height: 44px;
+        width: 44px;
+      }
       @include tablet-min {
         height: 60px;
         width: 60px;
@@ -52,14 +63,18 @@
           height: 32px;
           stroke: $primary-color;
           width: 32px;
+          @include small-phone {
+            height: 28px;
+            width: 28px;
+          }
         }
       }
     }
   }
 }
 #footer .navbar-bottom-special {
-  @include box-shadow-top();
   @include tablet-min {
+    @include box-shadow-top();
     .bottom-item {
       height: 72px;
     }

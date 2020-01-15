@@ -1,14 +1,31 @@
 #services {
   .services {
     display: grid;
-    grid-row-gap: 72px;
-    @include laptop-min {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 96px;
-      grid-row-gap: 96px;
-    }
+    grid-row-gap: 96px;
   }
   .services-item {
+    .item-title {
+      padding: 0 24px 48px;
+      text-align: center;
+      .title {
+        color: $tertiary-color;
+        font-family: $secondary-font;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .services-items {
+    display: grid;
+    grid-row-gap: 48px;
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 96px;
+    }
+
+
+  }
+  .service-item {
     position: relative;
     background-color: $primary-color;
     border-radius: 24px;
@@ -69,74 +86,3 @@
     }
   }
 }
-// #services {
-//   position: relative;
-//   .content {
-//     padding-top: 84px;
-//   }
-//   .services {
-//     display: grid;
-//     grid-row-gap: 108px;
-//     @include tablet-min {
-//       grid-template-columns: repeat(2, 1fr);
-//       grid-column-gap: 48px;
-//     }
-//     .services-item {
-//       position: relative;
-//       background-color: $white;
-//       padding: 84px 24px 72px;
-//       text-align: center;
-//       .item-icon {
-//         position: absolute;
-//         top: -60px;
-//         right: 0;
-//         left: 0;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         background-color: $gray-darker;
-//         border-radius: 50%;
-//         color: $white;
-//         font-size: 60px;
-//         height: 120px;
-//         margin: 0 auto;
-//         width: 120px;
-//       }
-//       .item-name {
-//         font-family: $primary-font;
-//         padding: 0 0 12px;
-//         @include small-phone {
-//           font-size: 28px;
-//         }
-//       }
-//       .item-description {
-//         line-height: 1.4;
-//         padding: 0 0 24px;
-//         strong, a {
-//           color: $gray-darker;
-//         }
-//       }
-//       .item-contact {
-//         position: absolute;
-//         bottom: 24px;
-//         right: -12px;
-//         display: flex;
-//         align-items: center;
-//         background-color: $gray-darker;
-//         color: $white;
-//         font-size: 20px;
-//         height: 48px;
-//         padding: 0 12px;
-//         transition: all 1s;
-//         @include box-shadow-bottom();
-//         .item-contact-icon {
-//           padding-left: 6px;
-//         }
-//         &:hover, &:focus, &:active {
-//           background-color: $gray-lighter;
-//           color: $gray-darker;
-//         }
-//       }
-//     }
-//   }
-// }

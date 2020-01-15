@@ -28,6 +28,10 @@ html, body {
     height: 24px;
     width: 24px;
   }
+  @include tablet-min {
+    height: 36px;
+    width: 36px;
+  }
 }
 main section {
   &:nth-child(even) {

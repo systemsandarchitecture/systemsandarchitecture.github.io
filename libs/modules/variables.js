@@ -28,8 +28,8 @@ module.exports = {
   whatsappLink: 'https://wa.me/14702955723',
   whatsappIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-whatsapp"><g transform="translate(6.01132, 6.0000003)"><path d="M 11.47702,8.7356352 V 10.391583 A 1.1038802,1.1039653 0 0 1 10.27379,11.495548 10.922895,10.923736 0 0 1 5.5105473,9.8009612 10.762832,10.763661 0 0 1 2.1989067,6.4890652 10.922895,10.923736 0 0 1 0.50445055,1.7033762 1.1038802,1.1039653 0 0 1 1.6028114,0.50005324 h 1.6558203 a 1.1038802,1.1039653 0 0 1 1.1038802,0.94941096 7.0869109,7.0874571 0 0 0 0.386358,1.551071 1.1038802,1.1039653 0 0 1 -0.248373,1.164683 L 3.799533,4.8662372 a 8.8310416,8.8317221 0 0 0 3.3116406,3.311896 l 0.7009639,-0.701019 a 1.1038802,1.1039653 0 0 1 1.1645938,-0.248392 7.0869109,7.0874571 0 0 0 1.5509507,0.386388 1.1038802,1.1039653 0 0 1 0.949338,1.120525 z M 14.058851,-2.17105 c -2.118423,-2.1184229 -5.043864,-3.3289503 -8.070182,-3.3289503 -6.2543915,0 -11.3991327,5.1447414 -11.3991327,11.399134 0,2.017545 0.5043864,3.934214 1.5131591,5.6491273 l -1.6140364,5.95176 6.0526368,-1.614037 c 1.6140364,0.907896 3.5307052,1.412282 5.4473732,1.412282 v 0 c 6.254391,0 11.50001,-5.144741 11.50001,-11.3991323 0,-3.0263196 -1.311405,-5.8508835 -3.429828,-8.0701837 z"/></g></svg>',
 
-  email: 'info@systemsandarchitecture.com',
-  emailLink: 'mailto:info@systemsandarchitecture.com',
+  email: 'contact@systemsandarchitecture.com',
+  emailLink: 'mailto:contact@systemsandarchitecture.com',
   emailIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>',
 
   instagram: '@systemsandarchitecture',
@@ -49,132 +49,18 @@ module.exports = {
 
   contactFormIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>',
 
-  services: {
-    english: [
-      {
-        name: 'Custom Web Design',
-        description: 'Starting from scratch, we will work with you in <strong>planning</strong> for your website. We will take care of even the smallest <strong>design</strong> detail by using the most trending <strong>development</strong> languages and tools. We will do all the necessary <strong>tests</strong> before the final <strong>publication.</strong>',
-        image: 'custom-web-design'
-      },
-      {
-        name: 'Custom Web Design on CMS Wordpress',
-        description: 'Wordpress is used by more than 25% of all websites worldwide. We design a unique template for your business.',
-        image: 'custom-web-design-on-cms-wordpress'
-      },
-      {
-        name: 'Redesign, Modification and/or Maintenance',
-        description: 'Your business website is already online... but it doesn&apos;t completely fulfill your expectations, you do not have time to upkeep your website, or web design is just not your thing. We can help you make changes, enhance, and/or maintain your business website.',
-        image: 'redesign-modification-maintenance'
-      },
-      {
-        name: 'Responsive Web Design',
-        description: 'We will make your business website user friendly and visually appealing on any device, whether it be a smartphone, tablet, laptop, or desktop computer.',
-        image: 'responsive-web-design'
-      },
-      {
-        name: 'Search Engine Optimization (SEO)',
-        description: 'We will use select keywords and coding needed to ensure that your website will appear among the top search results.',
-        image: 'search-engine-optimization-seo'
-      },
-      {
-        name: 'Web Virtual Reality',
-        description: 'Show your business in a different way. Introduce your customers to a new experience, showcasing your services in a 360 view.',
-        image: 'web-virtual-reality'
-      }
-    ],
-    spanish: [
-      {
-        name: 'Diseño Web Personalizado',
-        description: 'Empezando desde cero, trabajaremos contigo en la <strong>planificaci&oacute;n</strong> de tu sitio web, cuidaremos hasta el mas m&iacute;nimo detalle en el <strong>dise&ntilde;o</strong>, utilizando para ello las herramientas y lenguajes de <strong>desarrollo</strong> de &uacute;ltima tendencia, haremos todas las <strong>pruebas</strong> necesarias antes de la <strong>publicaci&oacute;n</strong> final de tu idea.',
-        image: 'diseno-web-personalizado'
-      },
-      {
-        name: 'Diseño Web Personalizado en CMS Wordpress',
-        description: 'Wordpress es utilizado por mas del 25% del total de sitios web a nivel mundial. Dise&ntilde;amos una plantilla &uacute;nica para tu negocio.',
-        image: 'diseno-web-personalizado-en-cms-wordpress'
-      },
-      {
-        name: 'Rediseño, Modificación y/o Mantenimiento',
-        description: 'El sitio web de tu negocio ya esta en l&iacute;nea, pero no llena totalmente tus expectativas, no tienes tiempo de revisarlo &oacute; simplemente el dise&ntilde;o web no es lo tuyo. ¿Quieres hacer cambios, mejorarlo, mantenerlo?',
-        image: 'rediseno-modificacion-mantenimiento'
-      },
-      {
-        name: 'Diseño Web Adaptable',
-        description: 'Haremos que la p&aacute;gina web de tu negocio se vea bien en cualquier dispositivo, ya sea un tel&eacute;fono inteligente, tableta, computadora port&aacute;til o computadora de escritorio.',
-        image: 'diseno-web-adaptable'
-      },
-      {
-        name: 'Optimización para Motores de Busqueda (SEO)',
-        description: 'Utilizaremos las palabras adecuadas y el c&oacute;digo necesario para que tu sitio web sea visto en las posiciones m&aacute;s altas en los resultados de busqueda.',
-        image: 'optimizacion-para-motores-de-busqueda-seo'
-      },
-      {
-        name: 'Realidad Virtual en tu Página Web',
-        description: 'Muestra tu negocio de una manera diferente. Presentale a tus clientes una nueva experiencia, mostrando tus servicios en una vista de 360 grados.',
-        image: 'realidad-virtual-en-tu-pagina-web'
-      }
-    ]
+  spreadsheetApi: 'https://sheets.googleapis.com/v4/spreadsheets/1UYxIOivsLOe-W88Dw7wpQnLNXzVlVbQ95mGCTyLRYkA/',
+  spreatsheetApiKey: 'key=AIzaSyALvpA28EbrTmVVOIYCus1pvM4Ye3kj4mI',
+  servicesCategories: 'values/Services_Categories!A2:C10?',
+  services: 'values/Services!A2:F20?',
+  portfolio: 'values/Portfolio!A2:C20?',
+  spreadsheetUrl: function(values) {
+    return this.spreadsheetApi+values+this.spreatsheetApiKey;
   },
 
-  portfolio: {
-    webDesign: [
-      {
-        name: 'Apex Furniture Refinishing',
-        url: 'https://atlantafurniturerefinishing.com/',
-        image: 'apex-furniture-refinishing'
-      },
-      {
-        name: 'Dalton Flooring Gallery',
-        url: 'https://daltonfloorsgallery.com/',
-        image: 'dalton-flooring-gallery'
-      },
-      {
-        name: 'Cuba Natural Medicine',
-        url: 'https://cubanaturalmedicine.com/',
-        image: 'cuba-natural-medicine'
-      },
-      {
-        name: 'Nazareth Grocery',
-        url: 'https://nazarethgrocery.com/',
-        image: 'nazareth-grocery'
-      },
-      {
-        name: 'Markets Depot USA',
-        url: 'https://marketsdepotusa.com/',
-        image: 'markets-depot-usa'
-      },
-      {
-        name: 'Tripoli Halal Meat',
-        url: 'https://tripolihalalmeat.com/',
-        image: 'tripoli-halal-meat'
-      },
-      {
-        name: 'Turkey Steel Erectors',
-        url: 'https://turkeysteelerectors.com/',
-        image: 'turkey-steel-erectors'
-      },
-      {
-        name: 'South Cobb Storage',
-        url: 'https://southcobbstorage.com/',
-        image: 'south-cobb-storage'
-      },
-      {
-        name: 'Kike\'s Tree Services',
-        url: 'https://kikestreeservices.com/',
-        image: 'kikes-tree-services'
-      },
-      {
-        name: 'DSJGA Ventures Inc',
-        url: 'https://dsjga.com/',
-        image: 'dsjga'
-      }
-    ],
-    webVirtualReality: [
-      { name: 'Outdoors', url: 'outdoors'},
-      { name: 'Indoors', url: 'indoors'},
-      { name: 'Open Spaces', url: 'open-spaces'}
-    ]
-  }
+  webVirtualReality: [
+    { name: 'Outdoors', url: 'outdoors'},
+    { name: 'Indoors', url: 'indoors'},
+    { name: 'Open Spaces', url: 'open-spaces'}
+  ]
 }
-
-
