@@ -5,37 +5,32 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://systemsandarchitecture.com/</loc>
-  <lastmod>2020-01-14</lastmod>
+  <lastmod>2025-12-15</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://systemsandarchitecture.com/espanol.html</loc>
-  <lastmod>2020-01-14</lastmod>
+  <lastmod>2025-12-15</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://systemsandarchitecture.com/web-virtual-reality.html</loc>
-  <lastmod>2020-01-14</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://systemsandarchitecture.com/#services</loc>
-  <lastmod>2020-01-14</lastmod>
+  <lastmod>2025-12-15</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://systemsandarchitecture.com/#portfolio</loc>
-  <lastmod>2020-01-14</lastmod>
+  <lastmod>2025-12-15</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://systemsandarchitecture.com/#contact</loc>
-  <lastmod>2020-01-14</lastmod>
+  <lastmod>2025-12-15</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://systemsandarchitecture.com/#about</loc>
-  <lastmod>2020-01-14</lastmod>
+  <lastmod>2025-12-15</lastmod>
   <priority>0.80</priority>
 </url>
 </urlset>

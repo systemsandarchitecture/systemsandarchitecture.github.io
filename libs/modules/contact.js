@@ -18,7 +18,7 @@ const contactStructure = `
               <form action="https://formspree.io/${variables.email}" method="POST" class="contact-form">
                 <div class="contact-form-header">
                   <div class="contact-form-header-icon" data-aos="zoom-in-up">${variables.contactFormIcon}</div>
-                  <p class="contact-form-header-text">${lang('please fill out the form below, we will contact you as soon as possible', 'por favor llena la siguiente forma, nos pondremos en contacto lo m&aacute;s pronto posible')}</p>
+                  <p class="contact-form-header-text">${lang('Please fill out the form below, we will contact you as soon as possible', 'Por favor llena la siguiente forma, nos pondremos en contacto lo m&aacute;s pronto posible')}</p>
                 </div>
                 <div class="form-group">
                   <label for="contact-name">${lang('Name', 'Nombre')}:</label>
@@ -31,7 +31,7 @@ const contactStructure = `
                   </div>
                   <div class="form-group">
                     <label for="contact-email">${lang('Email', 'Correo Electr&oacute;nico')}:</label>
-                    <input type="email" id="contact-email" placeholder="${lang('your-email@example.com', 'tu-email@ejemplo.com')}" name="${lang('Email', 'Correo Electr&oacute;nico')}">
+                    <input type="email" id="contact-email" placeholder="${lang('your-email@example.com', 'tu-email@ejemplo.com')}" name="_replyto">
                   </div>
                 </div>
                 <div class="form-group">
@@ -71,7 +71,7 @@ const contactStructure = `
                 </div>
                 <div class="form-group form-buttons">
                   <button type="reset" value="Reset" class="reset" data-aos="zoom-in-up">${lang('Reset', 'Borrar')}</button>
-                  <button type="submit" value="Submit" class="submit" data-aos="zoom-in-up">${lang('Submit', 'Enviar')}</button>
+                  <button type="submit" value="Send" class="submit" data-aos="zoom-in-up">${lang('Submit', 'Enviar')}</button>
                 </div>
                 <input type="hidden" name="_next" value="${variables.domain}thank-you.html">
               </form>

@@ -28,7 +28,6 @@
   .service-item {
     position: relative;
     background-color: $primary-color;
-    border-radius: 24px;
     padding: 48px 24px 96px;
     text-align: center;
     @include box-shadow-bottom();
@@ -56,32 +55,6 @@
       padding-bottom: 24px;
       strong {
         color: $tertiary-color;
-      }
-    }
-    .item-contact {
-      position: absolute;
-      bottom: 48px;
-      right: 24px;
-      display: inline-flex;
-      align-items: center;
-      background: linear-gradient(to right, $tertiary-color, $secondary-color);
-      border-radius: 24px;
-      color: $primary-color;
-      font-size: 18px;
-      height: 48px;
-      padding: 0 24px;
-      transition: all 1s;
-      @include box-shadow-bottom();
-      @include small-phone {
-        right: 12px;
-      }
-      @include tablet-min {
-        bottom: 72px;
-        right: 48px;
-      }
-      @include link {
-        font-weight: 300;
-        @include box-shadow-none();
       }
     }
   }

@@ -14,18 +14,16 @@ let portfolioStructure = `
 
         <div class="portfolio-item">
           <div class="portfolio-title">
-            <h2 class="title">${lang('Web Design', 'Dise&ntilde;o Web')}</h2>
+            <h2 class="title">${lang('Networking Services', 'Cableado Estructurado')}</h2>
           </div>
-          <div class="web-design"></div>
+          <div class="networking-services"></div>
         </div>
 
         <div class="portfolio-item">
           <div class="portfolio-title">
-            <h2 class="title">${lang('Web Virtual Reality', 'Realidad Virtual en tu P&aacute;gina Web')}</h2>
+            <h2 class="title">${lang('Security Systems', 'S&iacute;stemas de Seguridad')}</h2>
           </div>
-          <div class="portfolio-button-container">
-            <a href="./web-virtual-reality.html" rel="noopener" class="portfolio-button">${lang('check out this example', 'revisa este ejemplo')}</a>
-          </div>
+          <div class="security-services"></div>
         </div>
 
       </div>

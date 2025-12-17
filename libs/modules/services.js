@@ -90,11 +90,10 @@ if (services) {
         let serviceItem = `
           <div class="service-item">
             <div class="item-image-container">
-              <img src="./assets/images/services/systems-and-architecture-${image}.svg" alt="${variables.name} ${lang(name, nameSpa)}" class="item-image" data-aos="zoom-in-up">
+              <!-- <img src="./assets/images/services/systems-and-architecture-${image}.svg" alt="${variables.name} ${lang(name, nameSpa)}" class="item-image" data-aos="zoom-in-up"> -->
             </div>
             <h3 class="item-name">${lang(name, nameSpa)}</h3>
             <p class="item-description">${lang(description, descriptionSpa)}</p>
-            <a href="#contact" class="item-contact" data-aos="zoom-in-up">${lang('Contact Us...', 'Contáctanos...')}</a>
           </div>
           <script type="application/ld+json">
             { "@context": "http://schema.org",

@@ -8,4 +8,3 @@ import './modules/portfolio';
 import './modules/contact';
 import './modules/about';
 import './modules/footer-section';
-import './modules/web-virtual-reality';
